@@ -40,12 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function findMostRecentBook(books) {
   // 🪲 Bug: Logic error
-  const recentbook = books.reduce((mostRecent, book) => {
+  return books.reduce((mostRecent, book) => {
     const currentDate = new Date(book.published);
     const mostRecentDate = new Date(mostRecent.published);
     return currentDate > mostRecentDate ? book : mostRecent;
   });
-  return recentbook
 }
 
 function findIntersection(setA, setB) {
